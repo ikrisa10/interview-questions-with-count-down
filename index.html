@@ -1,23 +1,248 @@
 <!DOCTYPE html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interview Prep</title>
-  <link rel="stylesheet" href="style.css" />
-  
-</head>
-<body>
-  <h1>Countdown Clock</h1>
-  <div id="clockdiv">
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>ASSIGNMENT TITLE</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- GOOGLE FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+            rel="stylesheet"
+        />
+        <!-- LINKED STYLESHEET -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body onload="fillQuestions();">
+        <!-- Clock -->
+        <div id="clock">
+            <div class="time-select">
+                <button
+                    data-time="60"
+                    class="min-options"
+                    onclick="updateTimeAmount(this)"
+                >
+                    1:00
+                </button>
+                <button
+                    data-time="120"
+                    class="min-options"
+                    onclick="updateTimeAmount(this)"
+                >
+                    2:00
+                </button>
+                <button
+                    data-time="180"
+                    class="min-options"
+                    onclick="updateTimeAmount(this)"
+                >
+                    3:00
+                </button>
+            </div>
+            <!-- end class="time-select"   -->
+            <div class="time-display">
+                <h2 id="minutes">0</h2>
+                <h2>:</h2>
+                <h2 id="seconds">00</h2>
+            </div>
+            <button type="button" id="start-button" onclick="runClock()">
+                start
+            </button>
+        </div>
+        <main>
+            <div class="content">
+                <div class="row">
+                    <div class="question-area">
+                        <h2 id="time-management"></h2>
+                    </div>
+                    <div class="col">
+                        <div
+                            class="margin-5vh-tb margin-5vh-tb margin-5vw-lr respone-area-parent"
+                        >
+                            <div class="response-area">
+                                <p>Situation</p>
+                                <textarea></textarea>
+                            </div>
+                            <div class="response-area">
+                                <p>Task</p>
+                                <textarea></textarea>
+                            </div>
+                            <div class="response-area">
+                                <p>Action</p>
+                                <textarea></textarea>
+                            </div>
+                            <div class="response-area">
+                                <p>Result</p>
+                                <textarea></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <div>
-      <span class="minutes"></span>
-      <div class="smalltext">Minutes</div>
-    </div>
-    <div>
-      <span class="seconds"></span>
-      <div class="smalltext">Seconds</div>
-    </div>
-  </div>
-  <script src="script.js"></script>
-</body>
+                <div class="row">
+                    <div class="question-area">
+                        <h2 id="adaptability"></h2>
+                    </div>
+                    <div class="col">
+                        <div
+                            class="margin-5vh-tb margin-5vh-tb margin-5vw-lr respone-area-parent"
+                        >
+                            <div class="response-area">
+                                <p>Situation</p>
+                                <textarea></textarea>
+                            </div>
+                            <div class="response-area">
+                                <p>Task</p>
+                                <textarea></textarea>
+                            </div>
+                            <div class="response-area">
+                                <p>Action</p>
+                                <textarea></textarea>
+                            </div>
+                            <div class="response-area">
+                                <p>Result</p>
+                                <textarea></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="question-area">
+                        <h2 id="overcoming-challenges"></h2>
+                    </div>
+                    <div class="col">
+                        <div class="margin-5vh-tb response-area-parent">
+                            <div class="response-area">
+                                <p>Situation</p>
+                                <textarea></textarea>
+                            </div>
+                            <div class="response-area">
+                                <p>Task</p>
+                                <textarea></textarea>
+                            </div>
+                            <div class="response-area">
+                                <p>Action</p>
+                                <textarea></textarea>
+                            </div>
+                            <div class="response-area">
+                                <p>Result</p>
+                                <textarea></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="question-area">
+                        <h2 id="motivation-values"></h2>
+                    </div>
+                    <div class="col">
+                        <div class="response-area-parent">
+                            <div class="response-area">
+                                <p>Situation</p>
+                                <textarea></textarea>
+                            </div>
+                            <div class="response-area">
+                                <p>Task</p>
+                                <textarea></textarea>
+                            </div>
+                            <div class="response-area">
+                                <p>Action</p>
+                                <textarea></textarea>
+                            </div>
+                            <div class="response-area">
+                                <p>Result</p>
+                                <textarea></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="question-area">
+                        <h2 id="communication"></h2>
+                    </div>
+                    <div class="col">
+                        <div class="response-area-parent">
+                            <div class="response-area">
+                                <p>Situation</p>
+                                <textarea></textarea>
+                            </div>
+                            <div class="response-area">
+                                <p>Task</p>
+                                <textarea></textarea>
+                            </div>
+                            <div class="response-area">
+                                <p>Action</p>
+                                <textarea></textarea>
+                            </div>
+                            <div class="response-area">
+                                <p>Result</p>
+                                <textarea></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="question-area">
+                        <h2 id="teamwork"></h2>
+                    </div>
+                    <div class="col">
+                        <div class="response-area-parent">
+                            <div class="response-area">
+                                <p>Situation</p>
+                                <textarea></textarea>
+                            </div>
+                            <div class="response-area">
+                                <p>Task</p>
+                                <textarea></textarea>
+                            </div>
+                            <div class="response-area">
+                                <p>Action</p>
+                                <textarea></textarea>
+                            </div>
+                            <div class="response-area">
+                                <p>Result</p>
+                                <textarea></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="question-area">
+                        <h2 id="conflict-resolution"></h2>
+                    </div>
+                    <div class="col">
+                        <div class="response-area-parent">
+                            <div class="response-area">
+                                <p>Situation</p>
+                                <textarea></textarea>
+                            </div>
+                            <div class="response-area">
+                                <p>Task</p>
+                                <textarea></textarea>
+                            </div>
+                            <div class="response-area">
+                                <p>Action</p>
+                                <textarea></textarea>
+                            </div>
+                            <div class="response-area">
+                                <p>Result</p>
+                                <textarea></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>this is a footer</footer>
+        <!-- SCRIPT TAG -->
+        <script src="script.js"></script>
+    </body>
+</html>

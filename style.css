@@ -1,41 +1,77 @@
-body{
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+body {
+    text-align: center;
+    background: #00ecb9;
+    font-family: sans-serif;
+    font-weight: 100;
+    padding-top: 2vh;
+}
+
+h1 {
+    color: #396;
+    font-weight: 100;
+    font-size: 40px;
+    margin: 40px 0px 20px;
+}
+
+.content {
+    background-color: teal;
+    min-height: 90vh;
+    color: black;
+    padding: 0 5vw;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2vh;
+    /* justify-content: center;
+  text-align: center; */
+}
+.col {
+    background-color: #00d100;
+    padding: 3vh 5vw;
+    height: 100%;
+    flex: 3;
+}
+
+.question-area {
+    width: 100%;
+    flex: 1;
+    background-color: #0062d1;
+    padding: 3vh 5vw;
+    height: 100%;
+}
+
+.response-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: initial;
+}
+
+.response-area p {
+    flex: 1;
+}
+
+.response-area textarea {
+    flex: 3;
+}
+
+textarea {
+    height: 6vh;
+    margin-bottom: 2vh;
+}
+
+.response-area-parent {
+    margin-bottom: 10px;
+}
+
+.time-display {
+  display: flex;
+  align-items: center;
   text-align: center;
-  background: #00ECB9;
-  font-family: sans-serif;
-  font-weight: 100;
-}
-
-h1{
-  color: #396;
-  font-weight: 100;
-  font-size: 40px;
-  margin: 40px 0px 20px;
-}
-
-#clockdiv{
-  font-family: sans-serif;
-  color: #fff;
-  display: inline-block;
-  font-weight: 100;
-  text-align: center;
-  font-size: 30px;
-}
-
-#clockdiv > div{
-  padding: 10px;
-  border-radius: 3px;
-  background: #00BF96;
-  display: inline-block;
-}
-
-#clockdiv div > span{
-  padding: 15px;
-  border-radius: 3px;
-  background: #00816A;
-  display: inline-block;
-}
-
-.smalltext{
-  padding-top: 5px;
-  font-size: 16px;
 }
