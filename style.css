@@ -1,41 +1,84 @@
-body{
-  text-align: center;
-  background: #00ECB9;
-  font-family: sans-serif;
-  font-weight: 100;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+body {
+    padding: 0 10vw;
+}
+footer {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+navbar h2 {
+    font-size: 8vh;
+}
+navbar button {
+    padding: 0 0.5vw;
+    height: 5vh;
+    width: 8vw;
+    text-align: center;
+    background-color: lightblue;
+    font-size: 2vw;
+    border-radius: 25px;
 }
 
-h1{
-  color: #396;
-  font-weight: 100;
-  font-size: 40px;
-  margin: 40px 0px 20px;
+#start-button {
+    background-color: green;
 }
 
-#clockdiv{
-  font-family: sans-serif;
-  color: #fff;
-  display: inline-block;
-  font-weight: 100;
-  text-align: center;
-  font-size: 30px;
+.row {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 5vh;
+    border: 1px solid black;
+    padding: 2vh 2vw;
 }
 
-#clockdiv > div{
-  padding: 10px;
-  border-radius: 3px;
-  background: #00BF96;
-  display: inline-block;
+#question1 h2,
+#question2 h2 {
+    font-size: 2.5vw;
+}
+.col {
+    height: 100%;
+    flex: 2;
+}
+.question-area {
+    padding-bottom: 2vh;
+    width: 100%;
+    flex: 1;
+    height: 100%;
+}
+.response-area {
+    display: flex;
+    align-items: initial;
+    text-align: right;
 }
 
-#clockdiv div > span{
-  padding: 15px;
-  border-radius: 3px;
-  background: #00816A;
-  display: inline-block;
+.response-area p {
+    flex: 1;
+    margin-right: 2vw;
+}
+.response-area textarea {
+    flex: 2;
+}
+textarea {
+    height: 6vh;
+    margin-bottom: 2vh;
 }
 
-.smalltext{
-  padding-top: 5px;
-  font-size: 16px;
+.time-display {
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
