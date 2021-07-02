@@ -9,32 +9,29 @@ function updateTimeAmount(element) {
         secondsDisplay.innerText = element.innerText.split(":")[1];
 }
 
-function updateMinute() {
-  console.log(minutesDisplay.innerText);
-  if(minutesDisplay.innerText == "00") {
-    return minutesDisplay.innerText == 59;
-  } else if(parseInt(minutesDisplay.innerText) <= 10) {
-    return minutesDisplay.innerText == "0" + parseInt(minutesDisplay.innerText)-1;
-  }else {
-    return minutesDisplay.innerText == parseInt(minutesDisplay.innerText)-1;
+running = false;
+
+function updateBoth(){
+  while(running) {
+    if(minutesDisplay.innerText == "0" && secondsDisplay.innerText == "00") {
+      alert("Time is up");
+      return running=false;
+    } else if(secondsDisplay.innerText == "00"){
+      return [minutesDisplay.innerText = parseInt(minutesDisplay.innerText)-1,secondsDisplay.innerText = 59];
+    } else if(parseInt(secondsDisplay.innerText) <= 10) {
+      return secondsDisplay.innerText = "0" + (parseInt(secondsDisplay.innerText)-1);
+    } else {
+      return secondsDisplay.innerText = parseInt(secondsDisplay.innerText) -1;
+    }
   }
+  return running=false;
 };
 
-function updateSecond() {
-  console.log(secondsDisplay.innerText);
-  if(secondsDisplay.innerText == "00") {
-    return secondsDisplay.innerText == 59;
-  }else if(parseInt(secondsDisplay.innerText) <= 10) {
-    return secondsDisplay.innerText == "0" + parseInt(secondsDisplay.innerText) -1;
-  } else {
-    return secondsDisplay.innerText == parseInt(secondsDisplay.innerText) -1;
-  }
+startButton.onclick = function(){
+  running = true;
+  setInterval(updateBoth, 1000);
 }
 
-function runClock(){
-  setInterval(updateSecond, 1000);
-  setInterval(updateMinute, 60000);
-}
 
 //INTERVIEW QUESTIONS
 var timeManagement = [
