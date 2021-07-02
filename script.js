@@ -34,49 +34,37 @@ startButton.onclick = function(){
 
 
 //INTERVIEW QUESTIONS
-var timeManagement = [
+var questions = [
     "Tell me about a goal you set and reached and how you achieved it.",
     "Tell me about the last time your workday ended before you were able to get everything done.",
     "Give me an example of a time you had to prioritize certain tasks or projects over others.",
     "Give me an example of a time when you had to handle multiple responsibilities at once. How did you prioritize your time?",
     "Tell me about the last time you handle a long-term project. How did you keep the project on track?",
-];
-var adaptability = [
     "Can you share about a time you had to be flexible or adaptable?",
     "Tell me about a time when you had to be creative to solve a problem.",
     "Tell me about a time you had to learn quickly.",
     "Tell me about a time you made a difficult decision.",
     "Tell me about how you work under pressure.",
-];
-var overcomingChallenges = [
     "Tell me about a time when you handled a challenging situation.",
     "Tell me about a time when you made a mistake. What did you do to correct it?",
     "Give me an example of a time you made a decision that was unpopular and explain how you handled implementing it.",
     "Tell me about a goal you failed to achieve.",
     "Tell me about a time you felt you went above and beyond.",
-];
-var motivationValues = [
     "Give me an example of how you set goals.",
     "Tell me about the proudest moment in your professional career why it was meaningful to you.",
     "Can you give me an example of a time when you felt dissatisfied with your work?",
     "Tell me about a body of work you felt was most impactful for you or your company.",
     "How do you stay motivated when a job requires you to perform repetitive tasks?",
-];
-var communication = [
     "Tell me about a time when you had to say “no.”",
     "Give me an example of a time when you persuaded someone. How’d you do it and why?",
     "Talk about a time when you’ve had to manage up.",
     "Tell me about a time when you had to explain a complex topic to people with less subject knowledge. How did you make sure everyone could understand you?",
     "Tell me about a time you had to build rapport with a coworker or client whose personality was different than yours?",
-];
-var teamwork = [
     "    Tell me about a time when you collaborated with others who were different than you.",
     "Tell me about the best presentation you’ve given. Why was it good?",
     "Tell me about a time when you felt like a good leader.",
     "Can you give me an example of how you’ve contributed to the culture of previous teams, companies or groups?",
     "Share an example of how you were able to motivate a coworker, your peers or your team.",
-];
-var conflictResolution = [
     "Tell me about a time you disagreed with a supervisor.",
     "Tell me about a time you had to stand up for your beliefs.",
     "Tell me about a time when you disagreed with your manager’s leadership style or team culture.",
@@ -99,32 +87,12 @@ function randomInteger(min, max, incOrExc) {
 }
 
 function fillQuestions() {
-    document.getElementById("time-management").innerText =
-        timeManagement[randomInteger(0, timeManagement.length, "exclusive")];
+  return [document.getElementById("question1").innerText =
+      questions[randomInteger(0, questions.length, "exclusive")], document.getElementById("question2").innerText =
+      questions[randomInteger(0, questions.length, "exclusive")]]
+    
 
-    document.getElementById("adaptability").innerText =
-        adaptability[randomInteger(0, adaptability.length, "exclusive")];
-
-    document.getElementById("overcoming-challenges").innerText =
-        overcomingChallenges[
-            randomInteger(0, overcomingChallenges.length, "exclusive")
-        ];
-
-    document.getElementById("motivation-values").innerText =
-        motivationValues[
-            randomInteger(0, motivationValues.length, "exclusive")
-        ];
-
-    document.getElementById("communication").innerHTML =
-        communication[randomInteger(0, communication.length, "exclusive")];
-
-    document.getElementById("teamwork").innerText =
-        teamwork[randomInteger(0, teamwork.length, "exclusive")];
-
-    document.getElementById("conflict-resolution").innerText =
-        conflictResolution[
-            randomInteger(0, conflictResolution.length, "exclusive")
-        ];
+    
 }
 
 fillQuestions();
