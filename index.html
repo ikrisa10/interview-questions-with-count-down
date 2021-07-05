@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>ASSIGNMENT TITLE</title>
+        <title>Interview Prep</title>
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!-- GOOGLE FONT -->
@@ -59,6 +59,43 @@
         <main>
 
             <div class="content">
+                <button type="button" onclick="tellMeAboutYourself()" id="about-yourself-button">Tell Me About Yourself</button>
+                <div class="row" id="about-yourself">
+                    <div class="question-area">
+                        <h2>Tell me about yourself:</h2>
+                    </div>
+
+                    <div class="col">
+                            <div class="response-area">
+                                <p>Who you are - one sentence about you as a professional with a throughline of how your experience lends itself to interview role</p>
+                                <textarea placeholder="I'm a ____ with experience in ____.&#10;My educational/volunteer/work experience includes ____"></textarea>
+                            </div>
+
+                            <div class="HR-parent">
+                                <div class="HR-prompt">
+                                    <p>Highlight reel, 2-4 points that apply to interview role, quantifiable acheivements if possible, start with most recent experiences</p>
+                                        <button type="button" onclick="addReel()">additional highlight reel</button>
+                                </div>
+                                
+                                <div class="HR-textareas" id="HR-textareas-ID">
+                                    <div class="HR-textarea">
+                                        <textarea placeholder="1: In my last role as a ______ I [learned/acheived/etc...]..."></textarea>
+                                    </div>
+                                    <div class="HR-textarea">
+                                        <textarea placeholder="2: As a student at [bootcamp/university/etc] I _____ and [learned/acheived/etc...]"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="response-area">
+                                <p>Why the company and role are the best next step for you - why are you passionate?</p>
+                                <textarea placeholder="In reading about _____, I was excited about XYZ project/opportunity and think my _____ skills/experience will allow me to _____. I'm excited to learn more about the role, thank you for having me!"></textarea>
+                            </div>
+                        </div>
+                        <span><a href="https://www.youtube.com/watch?v=1ey58zDpBgE">Content format credit to Self-Made Millenial on Youtube</a></span>
+                    </div>
+                    
+                </div>
 
                 <div class="row">
 
