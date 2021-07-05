@@ -5,36 +5,66 @@ const timeSelect = document.querySelectorAll(".min-options");
 const startButton = document.querySelector("#start-button");
 
 function updateTimeAmount(element) {
-        minutesDisplay.innerText = element.innerText.split(":")[0]
-        secondsDisplay.innerText = element.innerText.split(":")[1];
+    minutesDisplay.innerText = element.innerText.split(":")[0];
+    secondsDisplay.innerText = element.innerText.split(":")[1];
 }
 
 running = false;
 let timerId;
 
-function updateBoth(){
-  while(running) {
-    if(minutesDisplay.innerText == "0" && secondsDisplay.innerText == "00") {
-      clearInterval(timerId);
-      [minutesDisplay.innerText = "Time",secondsDisplay.innerText = "Out"];
-      return running=false;
-    } else if(secondsDisplay.innerText == "00"){
-      return [minutesDisplay.innerText = parseInt(minutesDisplay.innerText)-1,secondsDisplay.innerText = 59];
-    } else if(parseInt(secondsDisplay.innerText) <= 10) {
-      return secondsDisplay.innerText = "0" + (parseInt(secondsDisplay.innerText)-1);
-    } else {
-      return secondsDisplay.innerText = parseInt(secondsDisplay.innerText) -1;
+function updateBoth() {
+    while (running) {
+        if (
+            minutesDisplay.innerText == "0" &&
+            secondsDisplay.innerText == "00"
+        ) {
+            clearInterval(timerId);
+            [
+                (minutesDisplay.innerText = "Time"),
+                (secondsDisplay.innerText = "Out"),
+            ];
+            return (running = false);
+        } else if (secondsDisplay.innerText == "00") {
+            return [
+                (minutesDisplay.innerText =
+                    parseInt(minutesDisplay.innerText) - 1),
+                (secondsDisplay.innerText = 59),
+            ];
+        } else if (parseInt(secondsDisplay.innerText) <= 10) {
+            return (secondsDisplay.innerText =
+                "0" + (parseInt(secondsDisplay.innerText) - 1));
+        } else {
+            return (secondsDisplay.innerText =
+                parseInt(secondsDisplay.innerText) - 1);
+        }
     }
-  }
-  return running=false;
-};
-
-startButton.onclick = function(){
-  clearInterval(timerId);
-  running = true;
-  timerId = setInterval(updateBoth, 1000);
+    return (running = false);
 }
 
+startButton.onclick = function () {
+    clearInterval(timerId);
+    running = true;
+    timerId = setInterval(updateBoth, 1000);
+};
+
+//buttons functions
+function tellMeAboutYourself() {
+  return document.getElementById("about-yourself").style.display = "block";
+}
+function addReel() {
+  var arrayOfTextAreas = document.getElementsByClassName("HR-textarea");
+  var insertionPoint = document.getElementById("HR-textareas-ID");
+  var insertionDiv = document.createElement("div");
+  insertionDiv.classList.add("HR-textarea")
+  var third = '<textarea placeholder="3: Outside of work as a [volunteer, leader, mentor, etc] I ____..."></textarea>'
+  var fourth = '<textarea placeholder="4: In my last team as a _____, I [contributed/lead/developed/acheived/etc]..."></textarea>'
+  if(arrayOfTextAreas.length == 2) {
+    insertionDiv.innerHTML = third;
+  } else if (arrayOfTextAreas.length == 3) {
+    insertionDiv.innerHTML = fourth;
+  }
+  return insertionPoint.appendChild(insertionDiv);
+}
 
 //INTERVIEW QUESTIONS
 var questions = [
@@ -90,14 +120,15 @@ function randomInteger(min, max, incOrExc) {
 }
 
 function fillQuestions() {
-  let randomOne = randomInteger(0, questions.length, "exclusive");
-  let randomTwo = randomInteger(0, questions.length, "exclusive");
-  while(randomOne === randomTwo) {
-    randomTwo = randomInteger(0, questions.length, "exclusive");
-  }
-  return [document.getElementById("question1").innerText =
-      questions[randomOne], document.getElementById("question2").innerText =
-      questions[randomTwo]]    
+    let randomOne = randomInteger(0, questions.length, "exclusive");
+    let randomTwo = randomInteger(0, questions.length, "exclusive");
+    while (randomOne === randomTwo) {
+        randomTwo = randomInteger(0, questions.length, "exclusive");
+    }
+    return [
+        (document.getElementById("question1").innerText = questions[randomOne]),
+        (document.getElementById("question2").innerText = questions[randomTwo]),
+    ];
 }
 
 fillQuestions();

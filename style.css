@@ -9,7 +9,6 @@ body {
 }
 footer {
     width: 100%;
-    text-align: center;
     position: fixed;
     bottom: 0;
 }
@@ -76,9 +75,33 @@ textarea {
     height: 6vh;
     margin-bottom: 2vh;
 }
-
 .time-display {
     display: flex;
     align-items: center;
     text-align: center;
+}
+#about-yourself {
+    display: none;
+}
+.HR-parent {
+    display: flex;
+}
+.HR-prompt {
+    flex: 1;
+    margin-right: 2vw;
+    margin-top: 2vh;
+}
+.HR-textareas {
+    flex: 2;
+    width: 100%;
+} 
+.HR-textareas textarea {
+    width: 100%;
+}
+
+.content {
+    text-align: center;
+}
+#about-yourself-button {
+    margin-bottom: 2vh;
 }
