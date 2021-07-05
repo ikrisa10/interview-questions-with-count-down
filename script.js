@@ -10,11 +10,13 @@ function updateTimeAmount(element) {
 }
 
 running = false;
+let timerId;
 
 function updateBoth(){
   while(running) {
     if(minutesDisplay.innerText == "0" && secondsDisplay.innerText == "00") {
-      alert("Time is up");
+      clearInterval(timerId);
+      [minutesDisplay.innerText = "Time",secondsDisplay.innerText = "Out"];
       return running=false;
     } else if(secondsDisplay.innerText == "00"){
       return [minutesDisplay.innerText = parseInt(minutesDisplay.innerText)-1,secondsDisplay.innerText = 59];
@@ -28,8 +30,9 @@ function updateBoth(){
 };
 
 startButton.onclick = function(){
+  clearInterval(timerId);
   running = true;
-  setInterval(updateBoth, 1000);
+  timerId = setInterval(updateBoth, 1000);
 }
 
 
@@ -60,7 +63,7 @@ var questions = [
     "Talk about a time when you’ve had to manage up.",
     "Tell me about a time when you had to explain a complex topic to people with less subject knowledge. How did you make sure everyone could understand you?",
     "Tell me about a time you had to build rapport with a coworker or client whose personality was different than yours?",
-    "    Tell me about a time when you collaborated with others who were different than you.",
+    "Tell me about a time when you collaborated with others who were different than you.",
     "Tell me about the best presentation you’ve given. Why was it good?",
     "Tell me about a time when you felt like a good leader.",
     "Can you give me an example of how you’ve contributed to the culture of previous teams, companies or groups?",
@@ -87,12 +90,14 @@ function randomInteger(min, max, incOrExc) {
 }
 
 function fillQuestions() {
+  let randomOne = randomInteger(0, questions.length, "exclusive");
+  let randomTwo = randomInteger(0, questions.length, "exclusive");
+  while(randomOne === randomTwo) {
+    randomTwo = randomInteger(0, questions.length, "exclusive");
+  }
   return [document.getElementById("question1").innerText =
-      questions[randomInteger(0, questions.length, "exclusive")], document.getElementById("question2").innerText =
-      questions[randomInteger(0, questions.length, "exclusive")]]
-    
-
-    
+      questions[randomOne], document.getElementById("question2").innerText =
+      questions[randomTwo]]    
 }
 
 fillQuestions();
