@@ -51,7 +51,11 @@
             </div>
 
             <button type="button" id="start-button">
-                start
+                START
+            </button>
+
+            <button type="button" id="stop-button">
+                STOP
             </button>
 
         </navbar>
@@ -91,10 +95,8 @@
                                 <p>Why the company and role are the best next step for you - why are you passionate?</p>
                                 <textarea placeholder="In reading about _____, I was excited about XYZ project/opportunity and think my _____ skills/experience will allow me to _____. I'm excited to learn more about the role, thank you for having me!"></textarea>
                             </div>
-                        </div>
-                        <span><a href="https://www.youtube.com/watch?v=1ey58zDpBgE">Content format credit to Self-Made Millenial on Youtube</a></span>
+                        <span><a href="https://www.youtube.com/watch?v=1ey58zDpBgE" target="blank">Content format credit to Self-Made Millenial on Youtube</a></span>
                     </div>
-                    
                 </div>
 
                 <div class="row">
@@ -104,22 +106,21 @@
                     </div>
 
                     <div class="col response-area-parent ">
-                            <div class="response-area">
-                                <p>Situation</p>
-                                <textarea></textarea>
-                            </div>
-                            <div class="response-area">
-                                <p>Task</p>
-                                <textarea></textarea>
-                            </div>
-                            <div class="response-area">
-                                <p>Action</p>
-                                <textarea></textarea>
-                            </div>
-                            <div class="response-area">
-                                <p>Result</p>
-                                <textarea></textarea>
-                            </div>
+                        <div class="response-area">
+                            <p>Situation</p>
+                            <textarea></textarea>
+                        </div>
+                        <div class="response-area">
+                            <p>Task</p>
+                            <textarea></textarea>
+                        </div>
+                        <div class="response-area">
+                            <p>Action</p>
+                            <textarea></textarea>
+                        </div>
+                        <div class="response-area">
+                            <p>Result</p>
+                            <textarea></textarea>
                         </div>
                     </div>
                 </div>
@@ -131,31 +132,35 @@
                     </div>
 
                     <div class="col response-area-parent">
-                            <div class="response-area">
-                                <p>Situation</p>
-                                <textarea></textarea>
-                            </div>
-                            <div class="response-area">
-                                <p>Task</p>
-                                <textarea></textarea>
-                            </div>
-                            <div class="response-area">
-                                <p>Action</p>
-                                <textarea></textarea>
-                            </div>
-                            <div class="response-area">
-                                <p>Result</p>
-                                <textarea></textarea>
-                            </div>
+                        <div class="response-area">
+                            <p>Situation</p>
+                            <textarea></textarea>
                         </div>
+                        <div class="response-area">
+                            <p>Task</p>
+                            <textarea></textarea>
                         </div>
-
+                        <div class="response-area">
+                            <p>Action</p>
+                            <textarea></textarea>
+                        </div>
+                        <div class="response-area">
+                            <p>Result</p>
+                            <textarea></textarea>
+                        </div>
+                    </div>
                 </div>
 
- 
+                <button type="button" onclick="revealBrainTeaser()" id="teaser-button">Get A Brain Teaser!</button>
+                <div id="brain-teaser-area">
+                    <p id="teaser"></p></br>
+                    <p><a href="https://interestingengineering.com/20-great-brainteasers-engineers" target="blank">Content credit, answers, and workings goes to Christopher McFadden</a></p></br>
+                    <textarea id="teaser-reply"></textarea>
+                </div>
             </div>
+
         </main>
-        <footer>contributors: Ilya, Steve, Karalynn</footer>
+        <footer>contributors:</br>Ilya, Steve, Karalynn</footer>
         <!-- SCRIPT TAG -->
         <script src="script.js"></script>
     </body>

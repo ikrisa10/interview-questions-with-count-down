@@ -11,6 +11,7 @@ footer {
     width: 100%;
     position: fixed;
     bottom: 0;
+    right: 0;
 }
 navbar {
     display: flex;
@@ -31,8 +32,12 @@ navbar button {
     border-radius: 25px;
 }
 
-#start-button {
+#start-button {  
     background-color: green;
+}
+
+#stop-button {
+    background-color: red;
 }
 
 .row {
@@ -73,7 +78,7 @@ navbar button {
 }
 textarea {
     height: 6vh;
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
 }
 .time-display {
     display: flex;
@@ -104,4 +109,30 @@ textarea {
 }
 #about-yourself-button {
     margin-bottom: 2vh;
+    padding: 0 0.5vw;
+    height: 5vh;
+    width: 15vw;
+    text-align: center;
+    background-color: lightblue;
+    font-size: 1vw;
+    border-radius: 25px;
+}
+
+#teaser-button {
+    margin-bottom: 2vh;
+    padding: 0 0.5vw;
+    height: 5vh;
+    width: 15vw;
+    text-align: center;
+    background-color: lightblue;
+    font-size: 1vw;
+    border-radius: 25px;
+}
+
+#brain-teaser-area {
+    display: none;
+}
+
+#teaser-reply {
+    width: 50%;
 }
