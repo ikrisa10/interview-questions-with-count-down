@@ -114,6 +114,8 @@ let questions = [
     "Tell me about a time when you disagreed with your manager’s leadership style or team culture.",
     "Tell me about a time when you were in conflict with a peer and how the situation was resolved.",
     "Tell me about a time you wish you’d handled a situation with a coworker differently.",
+    "What do you know about the company? Why do you want to work for Kapsch?",
+    "What are your greatest professional strenght? What do you consider to be your weakness?"
 ];
 
 let teasers = [
